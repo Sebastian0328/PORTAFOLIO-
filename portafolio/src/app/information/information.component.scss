@@ -1,0 +1,92 @@
+section{
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+.about-me{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  .me{
+    background-color:   #14142c ;
+    border: 2px solid  #3b286f;
+    border-radius: 5px;
+    color: #8c8c94 ;
+    padding: 10px;
+    width: 90%; /* Reducir el ancho para que se ajuste a dispositivos móviles */
+    max-width: 400px;
+  }
+  .acompañamiento{
+    img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%; /* Cambiar el radio de borde a 50% para que sea un círculo */
+  width: 100px; /* Reducir el tamaño de la imagen */
+  z-index: 999;
+      animation: rotar 5s linear infinite;
+
+    }
+  }
+@keyframes rotar {
+  from{
+    transform: rotatey(180deg);
+  }
+  to{
+    transform:rotatey(360deg) ;
+  }
+}
+
+}
+.skills{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+.lenguajes{
+  display: flex;
+  justify-content: space-around;
+}
+.framewokrs{
+  display: flex;
+  justify-content: space-around;
+}
+}
+.lenguaje{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid  #3b286f ;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color:  #1c1d3c    ;
+  &:hover{
+    border-radius: 10px;
+    transform: scale(1.15);
+    box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
+    border-bottom: 2px solid transparent;
+transition: border-bottom-color 0.3s ease;
+  }
+}
+.soft-skills{
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+justify-content:space-around;
+div{
+  padding: 5px;
+  display: flex;
+  background-color: #14142c;
+  border-radius: 5px;
+  border: 2px solid #3b286f  ;
+  &:hover{
+    border-radius: 10px;
+    transform: scale(1.15);
+    box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
+    border-bottom: 2px solid transparent;
+transition: border-bottom-color 0.3s ease;
+  }
+}
+}
