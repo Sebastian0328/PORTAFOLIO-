@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2024-03-30T12:35:30.259Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="oqj-Cwth_3VjdwCZEfTh" version="24.2.1" type="github">
+  <diagram name="Página-1" id="bpw0Nw-7BShiZuTPaywm">
+    <mxGraphModel dx="794" dy="2784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wcuISaucazBi9JVI4VtQ-1" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="-1670" width="620" height="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-3" value="acerca de mi&amp;nbsp; &amp;nbsp; &amp;nbsp;redes sociales&amp;nbsp; &amp;nbsp;skills soft skills&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;proyecos&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; contactame&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="20" y="20" width="580" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="30" y="120" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="30" y="100" width="580" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-7" value="Foto mia jejej" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="50" y="130" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-8" value="Nombre y una frase bien pro" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="280" y="110" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-9" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="30" y="330" width="560" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-17" value="acerca sobre mi (un texto no tan largo que diga quien soy)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="65" y="350" width="495" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-18" value="skills y soft skills" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="70" y="470" width="480" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-19" value="redes sociales logos y eso&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="240" y="260" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-20" value="proyectos&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="30" y="740" width="560" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-21" value="contactarme&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wcuISaucazBi9JVI4VtQ-1">
+          <mxGeometry x="20" y="1280" width="560" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wcuISaucazBi9JVI4VtQ-22" value="juego (opcional)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="-610" width="550" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
