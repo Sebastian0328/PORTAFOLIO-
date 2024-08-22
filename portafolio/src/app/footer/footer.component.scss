@@ -1,0 +1,25 @@
+.footer{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color:  #0c0c1a ;
+  border-radius: 5px;
+  color:  #7045d0;
+  padding: 5px;
+  gap: 10px;
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    &:hover{
+      border-radius: 10px;
+      transform: scale(1.15);
+      box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
+      border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+
+    }
+  }
+}
