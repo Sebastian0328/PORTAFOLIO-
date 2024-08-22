@@ -1,0 +1,29 @@
+section[id]{
+  scroll-margin-top: 70px;
+}
+body{
+
+  margin: 0;
+  height: 100vh;
+  background-color: #0d133e;
+  background-image: linear-gradient(120deg, rgba(13, 19, 62, 0.8) 0%, rgba(84, 22, 92, 0.6) 30%, rgba(255, 255, 255, 0.2) 60%, rgba(84, 22, 92, 0.6) 90%, rgba(13, 19, 62, 0.8) 100%);
+  background-size: 200% 200%;
+  animation: waveAnimation 8s ease infinite;
+  font-family: "Dosis";
+  color:rgba(255, 255, 255, 0.8);;
+  h2{
+    color: #7346d4 ;
+  }
+}
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+/* You can add global styles to this file, and also import other style files */
