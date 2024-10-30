@@ -1,92 +1,155 @@
-section{
-  margin-left: 6rem;
-  margin-right: 6rem;
+.bio-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.about-me{
+.lineaVerde {
+  background-color: #adff2f;
+  width: 200px;
+  height: 5px;
+}
+.InfoMe {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  .bio{
+    p{
+      padding: 0;
+    }
+  }
+
+  // padding: 20px;
+  h1 {
+    color: aliceblue;
+  }
+  p {
+    color: aliceblue;
+  }
+}
+.about-me {
   display: flex;
   gap: 20px;
   justify-content: space-around;
   align-items: center;
-  .me{
-    background-color:   #14142c ;
-    border: 2px solid  #3b286f;
-    border-radius: 5px;
-    color: #8c8c94 ;
-    padding: 10px;
-    width: 90%; /* Reducir el ancho para que se ajuste a dispositivos móviles */
-    max-width: 400px;
-  }
-  .acompañamiento{
-    img{
+
+  .acompañamiento {
+    img {
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 50%; /* Cambiar el radio de borde a 50% para que sea un círculo */
-  width: 100px; /* Reducir el tamaño de la imagen */
-  z-index: 999;
+      width: 100px; /* Reducir el tamaño de la imagen */
+      z-index: 999;
       animation: rotar 5s linear infinite;
-
     }
   }
-@keyframes rotar {
-  from{
-    transform: rotatey(180deg);
+  @keyframes rotar {
+    from {
+      transform: rotatey(180deg);
+    }
+    to {
+      transform: rotatey(360deg);
+    }
   }
-  to{
-    transform:rotatey(360deg) ;
+}
+.skills {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #161616;
+  h2 {
+    color: aliceblue;
+    margin: 0; // Elimina cualquier margen por defecto
+    padding: 0;
+  }
+
+  .lenguajes {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
-
-}
-.skills{
+.lenguaje {
+  color: aliceblue;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-.lenguajes{
-  display: flex;
-  justify-content: space-around;
-}
-.framewokrs{
-  display: flex;
-  justify-content: space-around;
-}
-}
-.lenguaje{
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid  #3b286f ;
-  width: 100px;
   padding: 10px;
   border-radius: 5px;
-  background-color:  #1c1d3c    ;
-  &:hover{
+
+  &:hover {
     border-radius: 10px;
     transform: scale(1.15);
-    box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
+    box-shadow: 0 0 10px 3px #adff2f;
     border-bottom: 2px solid transparent;
-transition: border-bottom-color 0.3s ease;
+    transition: border-bottom-color 0.3s ease;
   }
 }
-.soft-skills{
-display: flex;
-gap: 10px;
-flex-wrap: wrap;
-justify-content:space-around;
-div{
-  padding: 5px;
+.softSkill {
+  h3 {
+    color: aliceblue;
+  }
   display: flex;
-  background-color: #14142c;
-  border-radius: 5px;
-  border: 2px solid #3b286f  ;
-  &:hover{
-    border-radius: 10px;
-    transform: scale(1.15);
-    box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
-    border-bottom: 2px solid transparent;
-transition: border-bottom-color 0.3s ease;
+  flex-direction: column;
+  // gap: 8px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .listSoft {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    div {
+      p {
+        font-size: 8px;
+      }
+      display: flex;
+      background-color: transparent;
+      padding: 5px;
+      border-radius: 18px;
+      border: 2px solid beige;
+      width: max-content;
+      &:hover {
+        background-color: #adff2f;
+        border-radius: 10px;
+        transform: scale(1.15);
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.3s ease;
+      }
+    }
   }
 }
+.Experience {
+  background-color: black;
+  padding: 70px;
+  h2,
+  h1 {
+    color: white;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.7); // Blanco con opacidad del 70%
+  }
+
+  .Exp-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0; // Asegúrate de que no haya espacio entre los elementos
+    h2,
+    p {
+      margin: 0; // Elimina cualquier margen por defecto
+      padding: 0; // Elimina cualquier padding por defecto
+    }
+  }
+  .Exp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.text {
+  width: 500px;
 }

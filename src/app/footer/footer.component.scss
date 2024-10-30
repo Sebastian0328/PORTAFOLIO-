@@ -1,25 +1,66 @@
 .footer{
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-around;
-  background-color:  #0c0c1a ;
-  border-radius: 5px;
-  color:  #7045d0;
-  padding: 5px;
-  gap: 10px;
-  div{
     display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #424d00, #000000);
+    padding: 40px;
+    font-family: "REM";
+    gap: 40px;
+  }
+
+.get{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 5px;
-    &:hover{
-      border-radius: 10px;
-      transform: scale(1.15);
-      box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
-      border-bottom: 2px solid transparent;
-  transition: border-bottom-color 0.3s ease;
-
+    h1, p {
+      color: aliceblue;
+      margin: 0; // Elimina cualquier margen por defecto
+      padding: 0; // Elimina cualquier padding por defecto
+    }
+    p{
+      color: #d5f907;
     }
   }
+
+.Contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  h3, p{
+    margin: 0; // Elimina cualquier margen por defecto
+    padding: 0;
+    color: aliceblue;
+  }
+  }
+  }
+.end{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name{
+    display: flex;
+    justify-content: center;
+
+      h1 {
+        font-size: 48px; /* Tamaño del texto */
+        color: transparent; /* Sin color de relleno */
+        -webkit-text-stroke: 1px #ffffff; /* Color del borde blanco */
+        text-transform: uppercase; /* Texto en mayúsculas, si lo deseas */
+      }
+
+}
+.line-black{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 800px;
+  height: 2px;
+
 }

@@ -1,8 +1,33 @@
 .home{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   margin-top: 80px;
+}
+
+.container-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Name{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+p{
+  color: #ADFF2F;
+}
+h1{
+  color: aliceblue;
+  ;
+}
+.text{
+  color: aliceblue;
+}
+.Container-web{
+  font-size: 10px;
+  color: black;
+  background-color: #ADFF2F;
+  width: max-content;
+}
 }
 .foto{
   img{
@@ -28,13 +53,4 @@ width: max-content;
     }
   }
 
-}
-.container-name{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h3{
-    color: green;
-  }
 }
