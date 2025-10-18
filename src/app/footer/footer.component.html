@@ -4,51 +4,59 @@
     <P>Let's Work Together</P>
   </div>
 
-  <div class="Contact">
-    <div>
-      <img
-        src="assets/img/llamada-telefonica.png"
-        alt="telefono"
-        width="50"
-        height="50"
-      />
+ <div class="Contact">
+  <!-- Teléfono -->
+  <div class="contact-item">
+    <img src="assets/img/llamada-telefonica.png" alt="Phone" width="50" height="50" />
+    <div class="contact-body">
       <h3>Mobile</h3>
-      <p>+34 690873455</p>
+      <p><a href="tel:+34690873455">+34 690873455</a></p>
     </div>
-    <div>
-      <img
-        src="assets/img/gmail.png"
-        alt="correo"
-        srcset=""
-        width="50"
-        height="50"
-      />
+  </div>
+
+  <!-- Email -->
+  <div class="contact-item email">
+    <img src="assets/img/gmail.png" alt="Email" width="50" height="50" />
+    <div class="contact-body">
       <h3>Email</h3>
-      <p>{{ "alvarezpaezsebastian03@gmail.com" }}</p>
+
+      <div class="email-actions">
+        <span class="email-chip"></span>
+
+        <button type="button" class="btn-chip" (click)="copyEmail()" aria-describedby="copyStatus">
+          Copy
+        </button>
+
+        <a class="btn-chip primary" [href]="mailtoHref" rel="nofollow">
+          Email
+        </a>
+      </div>
+
+      <span id="copyStatus" class="sr-only" aria-live="polite">{{ copyMsg }}</span>
     </div>
-    <div>
-      <a href="https://www.linkedin.com/in/sebastian-alvarez-paez-566799271/">
-        <img
-          src="assets/img/linkedinVerde.png"
-          alt="linkedin"
-          srcset=""
-          width="50"
-          height="50"
-        /></a>
-        <h3>Linkedin</h3>
-        <p>{{ "Sebastian Alvarez Paez" }}</p>
+  </div>
+
+  <!-- Linkedin -->
+  <div class="contact-item">
+    <a href="https://www.linkedin.com/in/sebastian-alvarez-paez-566799271/" target="_blank" rel="noopener">
+      <img src="assets/img/linkedinVerde.png" alt="LinkedIn" width="50" height="50" />
+    </a>
+    <div class="contact-body">
+      <h3>Linkedin</h3>
+      <p><a href="https://www.linkedin.com/in/sebastian-alvarez-paez-566799271/" target="_blank" rel="noopener">Ver perfil</a></p>
     </div>
-    <div>
-      <img
-        src="assets/img/direction.png"
-        alt="direction"
-        width="50"
-        height="50"
-      />
+  </div>
+
+  <!-- Dirección -->
+  <div class="contact-item">
+    <img src="assets/img/direction.png" alt="Address" width="50" height="50" />
+    <div class="contact-body">
       <h3>Address</h3>
       <p>Spain</p>
     </div>
   </div>
+</div>
+
   <div class="end">
     <div class="line-black"></div>
     <div class="name">

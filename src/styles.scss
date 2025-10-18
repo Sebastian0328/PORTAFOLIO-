@@ -5,10 +5,16 @@ section[id] {
 body {
   margin: 0;
   height: 100vh;
-  background-image: url("../src/assets/img/fondo.jpeg");
-  animation: waveAnimation 8s ease infinite;
+  background-color: black;
   font-family: "REM";
 }
+$color-bg: #161616;
+$color-text: #e6f0ff; // más legible que aliceblue puro
+$color-accent: #ADFF2F;
+$color-chip-text: #0a0a0a;
+
+$radius-md: 10px;
+$shadow-soft: 0 6px 24px rgba(0,0,0,.25);
 
 @keyframes waveAnimation {
   0% {

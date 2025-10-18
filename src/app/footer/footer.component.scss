@@ -1,66 +1,170 @@
+@import "../../styles/mixins";
+
+/* ===== Tokens rápidos ===== */
+$accent: #ADFF2F;
+$text: #eaf3ff;
+$muted: rgba(255,255,255,.85);
+$chip-bg: rgba(173,255,47,.08);
+$chip-border: rgba(255,255,255,.14);
+
+/* =========================
+   FOOTER (wrapper general)
+   ========================= */
 .footer{
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, #424d00, #000000);
-    padding: 40px;
-    font-family: "REM";
-    gap: 40px;
-  }
+  display:flex; flex-direction:column;
+  background: linear-gradient(180deg, #424d00, #000000);
+  padding: clamp(24px, 5vw, 48px);
+  gap: clamp(20px, 4vw, 40px);
+  font-family:"REM";
+}
 
+/* Cabecera “Get in touch” */
 .get{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1, p {
-      color: aliceblue;
-      margin: 0; // Elimina cualquier margen por defecto
-      padding: 0; // Elimina cualquier padding por defecto
-    }
-    p{
-      color: #d5f907;
-    }
-  }
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  gap: 6px;
 
+  h1{ margin:0; padding:0; color:$text; font-size: clamp(24px, 4.5vw, 40px); }
+  p { margin:0; padding:0; color:#d5f907; font-size: clamp(12px, 2.8vw, 16px); }
+}
+
+/* =========================
+   CONTACT (mejorado)
+   ========================= */
 .Contact{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  h3, p{
-    margin: 0; // Elimina cualquier margen por defecto
-    padding: 0;
-    color: aliceblue;
-  }
-  }
-  }
-.end{
-  display: flex;
+  /* Mobile: lista vertical con buen espaciado */
+  display:flex;
   flex-direction: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-}
-.name{
-    display: flex;
-    justify-content: center;
+ 
 
-      h1 {
-        font-size: 48px; /* Tamaño del texto */
-        color: transparent; /* Sin color de relleno */
-        -webkit-text-stroke: 1px #ffffff; /* Color del borde blanco */
-        text-transform: uppercase; /* Texto en mayúsculas, si lo deseas */
+  .contact-item{
+    display:flex;
+    grid-template-columns: 50px 1fr;
+    align-items:center;
+    gap: 10px;
+
+    /* Iconos */
+    img{ width:50px; height:50px; display:block; }
+
+    /* Texto */
+    .contact-body{
+      display:flex; flex-direction:column; gap: 4px;
+      h3{ margin:0; color:$text; font-weight:800; font-size: clamp(16px, 3.5vw, 18px); }
+      p { margin:0; color:$muted; }
+      a { color:$text; text-decoration:none; border-bottom:1px solid transparent;
+          &:hover{ color:$accent; border-bottom-color:$accent; } }
+    }
+  }
+
+  /* Variantes para Email (si usas los botones) */
+  &.has-actions{
+    .email .email-actions{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:8px 10px; margin-top:4px;
+
+      .email-chip{
+        background:$chip-bg; color:$text;
+        border:1px solid $chip-border;
+        padding:6px 10px; border-radius:10px; user-select:all;
+        font-size:14px;
       }
 
-}
-.line-black{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  width: 800px;
-  height: 2px;
+      .btn-chip{
+        padding:6px 12px; border-radius:10px;
+        border:1px solid $chip-border; background:transparent; color:$text;
+        cursor:pointer; transition:transform .15s ease, background-color .2s ease, border-color .2s ease;
+        &:hover{ background:rgba(255,255,255,.06); }
+        &:focus-visible{ outline:2px solid $accent; outline-offset:2px; }
 
+        &.primary{
+          background: linear-gradient(180deg, $accent, rgba(173,255,47,.85));
+          color:#0a0a0a; border-color:transparent; font-weight:800;
+          &:hover{ transform: translateY(-1px); }
+        }
+      }
+    }
+  }
+}
+
+/* Línea separadora decorativa */
+.line-black{
+  margin-inline:auto;
+  background-color:#ffffff;
+  width: min(800px, 90%);
+  height:2px;
+}
+
+/* Bloque final */
+.end{
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px;
+  p, span { color:$muted; margin:0; }
+}
+
+/* Nombre contorneado */
+.name{
+  display:flex; justify-content:center;
+  h1{
+    margin:0;
+    font-size: clamp(32px, 8vw, 48px);
+    color:transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-transform: uppercase;
+  }
+}
+
+/* =========================
+   RESPONSIVE (tus mixins)
+   ========================= */
+
+/* XS ya cubierto (mobile-first) */
+
+/* SM: ícono un pelín más grande */
+@include responsive(sm){
+  
+  .Contact{ display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  }
+}
+
+/* MD: más aire */
+@include responsive(md){
+.Contact{ display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  }
+  }
+
+
+/* LG+: dos columnas ordenadas y centrado del footer */
+@include responsive(lg){
+  .Contact{ display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  }
+
+  /* Alineación visual más elegante en desktop */
+}
+
+/* XL/XXL: pequeños ajustes de respiración */
+@include responsive(xl){
+  .Contact{ display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  }
+}
+@include responsive(xxl){
+
+  .Contact{ display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  }
+}
+
+/* Accesibilidad: helper si usas feedback de copia */
+.sr-only{
+  position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
 }

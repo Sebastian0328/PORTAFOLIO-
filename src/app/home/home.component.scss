@@ -1,56 +1,260 @@
-.home{
-  margin-top: 80px;
+/* 1) Importa TU mixin (con ; al final) */
+@import "../../styles/mixins";
+
+/* 2) (Opcional) Alias para no tocar llamadas antiguas:
+   Así @include respond(md) llamará a @include responsive(md) */
+@mixin respond($bp) {
+  @include responsive($bp) { @content; }
 }
 
-.container-name{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ===== Tokens locales (o muévelos a tu sistema de tokens) ===== */
+$color-bg: #161616;
+$color-text: #e6f0ff; // más legible que aliceblue puro
+$color-accent: #ADFF2F;
+$color-chip-text: #0a0a0a;
+
+$radius-md: 10px;
+$shadow-soft: 0 6px 24px rgba(0,0,0,.25);
+
+/* ===== Sección ===== */
+/* === HOME (igual puedes dejarlo así) === */
+.home {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: $color-bg;
+
+  @include responsive(md) {
+    padding: 40px 32px;
+    margin-bottom: 48px;
+  }
 }
-.Name{
+
+/* === CONTENEDOR === */
+.container-name {
+  max-width: 1100px;
+  margin-inline: auto;                 // el contenedor puede ir centrado
+  padding-inline: clamp(12px, 4vw, 24px);
+  display: grid;
+  row-gap: 24px;
+
+  /* Si quieres que TODO el bloque se pegue a la izquierda en desktop:
+  @include responsive(lg) { margin-inline: 0; }
+  @include responsive(xl) { margin-inline: 0; }
+  @include responsive(xx l) { margin-inline: 0; }  */
+}
+
+/* === HERO / NOMBRE === */
+.Name {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 50%;
-p{
-  color: #ADFF2F;
-}
-h1{
-  color: aliceblue;
-  ;
-}
-.text{
-  color: aliceblue;
-}
-.Container-web{
-  font-size: 10px;
-  color: black;
-  background-color: #ADFF2F;
-  width: max-content;
-}
-}
-.foto{
-  img{
-    border-radius: 150px;
-  }
-
-}
-.Networks{
-width: max-content;
-  background-color: #131d62 ;
-  padding: 8px;;
-  display: flex;
-  border-radius: 5px;
+  align-items: center;     // móvil centrado
   justify-content: center;
-  gap: 10px;
-  img{
-    &:hover{
-      border-radius: 10px;
-      transform: scale(1.15);
-      box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
-      border-bottom: 2px solid transparent;
-  transition: border-bottom-color 0.3s ease;
+  gap: clamp(8px, 2.5vw, 14px);
+  text-align: center;
+  margin-left: 0;
+
+  // Alineado a la izquierda en escritorio (md, lg, xl, xxl)
+  @include responsive(md)  { align-items: flex-start; text-align: left; }
+  @include responsive(lg)  { align-items: flex-start; text-align: left; }
+  @include responsive(xl)  { align-items: flex-start; text-align: left; }
+  @include responsive(xx l){ align-items: flex-start; text-align: left; }
+
+  .Name-H {
+    p {
+      color: $color-accent;
+      font-size: clamp(20px, 4.5vw, 36px);
+      line-height: 1.1;
+      margin: 0 0 6px 0;
+      letter-spacing: .5px;
+    }
+
+    h1 {
+      color: $color-text;
+      font-size: clamp(32px, 8vw, 72px);
+      // line-height: clamp(1.05, 3vw, 1.12);
+      margin: 0;
+      font-weight: 800;
+      text-wrap: balance;
     }
   }
 
+  .Container-web {
+    
+    background-color: $color-accent;
+    color: $color-chip-text;
+    // font-weight: 700;
+    font-size: clamp(14px, 2.8vw, 18px);
+    line-height: 1.2;
+    padding: 0;
+    
+    
+    box-shadow: $shadow-soft;
+
+    // también izquierda en desktop
+    @include responsive(md)  { margin-left: 0; }
+    @include responsive(lg)  { margin-left: 0; }
+    @include responsive(xl)  { margin-left: 0; }
+    @include responsive(xx l){ margin-left: 0; }
+  }
+
+  .text {
+    color: $color-text;
+    max-width: 60ch;
+    font-size: clamp(14px, 2.9vw, 18px);
+    line-height: 1.6;
+    opacity: .9;
+  }
 }
+
+/* === FOTO === */
+.foto {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: clamp(140px, 40vw, 220px);
+    height: auto;
+    border-radius: 150px;
+    box-shadow: $shadow-soft;
+    object-fit: cover;
+  }
+
+  // en desktop, a la izquierda
+  @include responsive(md)  { justify-content: flex-start; }
+  @include responsive(lg)  { justify-content: flex-start; }
+  @include responsive(xl)  { justify-content: flex-start; }
+  @include responsive(xx l){ justify-content: flex-start; }
+}
+
+/* === REDES === */
+.Networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;   // centradas en móvil
+  gap: clamp(8px, 2.5vw, 12px);
+  width: fit-content;
+  margin-inline: auto;
+  background-color: #131d62;
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-shadow: $shadow-soft;
+
+  // en desktop, pegadas a la izquierda
+  @include responsive(md)  { margin-inline: 0; justify-content: flex-start; }
+  @include responsive(lg)  { margin-inline: 0; justify-content: flex-start; }
+  @include responsive(xl)  { margin-inline: 0; justify-content: flex-start; }
+  @include responsive(xx l){ margin-inline: 0; justify-content: flex-start; }
+
+  a { display: inline-flex; line-height: 0; }
+
+  img {
+    width: clamp(28px, 7vw, 35px);
+    height: clamp(28px, 7vw, 35px);
+    border-radius: 6px;
+    transition: transform .25s ease, box-shadow .25s ease, border-radius .25s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-radius: 10px;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px 3px rgba(14, 136, 230, 0.7);
+      outline: none;
+    }
+  }
+}
+/* CONTENEDOR (izquierda en desktop y escalado en pantallas grandes) */
+.container-name {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: clamp(12px, 4vw, 24px);
+  display: grid;
+  row-gap: 24px;
+
+  /* Desde md: pegado a la izquierda (no centrado) */
+  @include responsive(md)  { margin-inline: 0; max-width: 1200px; padding-inline: 32px; }
+  @include responsive(lg)  { margin-inline: 0; max-width: 1280px; padding-inline: 48px; }
+  @include responsive(xl)  { margin-inline: 0; max-width: 1440px; padding-inline: 64px; }
+  @include responsive(xxl) { margin-inline: 0; max-width: 1600px; padding-inline: 80px; }
+
+  /* Ultra-wide adicional (2K+) */
+  @media (min-width: 1600px) {
+    max-width: 1680px;
+    padding-inline: 96px;
+  }
+}
+
+/* HERO: móvil centrado; desktop a la izquierda */
+.Name {
+  align-items: center;
+  text-align: center;
+
+  @include responsive(md)  { align-items: flex-start; text-align: left; }
+  @include responsive(lg)  { align-items: flex-start; text-align: left; }
+  @include responsive(xl)  { align-items: flex-start; text-align: left; }
+  @include responsive(xxl) { align-items: flex-start; text-align: left; }
+
+  .Name-H {
+    p { font-size: clamp(20px, 4.5vw, 36px); }
+
+    h1 {
+      font-size: clamp(32px, 7vw, 72px);
+      line-height: 1.08;
+
+      @include responsive(lg)  { font-size: clamp(40px, 6vw, 80px); }
+      @include responsive(xl)  { font-size: clamp(44px, 5.5vw, 90px); }
+      @include responsive(xxl) { font-size: clamp(48px, 5vw, 96px); }
+
+      @media (min-width: 1600px) { font-size: clamp(52px, 4.5vw, 104px); }
+    }
+  }
+
+  .Container-web {
+    @include responsive(md)  { margin-left: 0; }
+    @include responsive(lg)  { margin-left: 0; }
+    @include responsive(xl)  { margin-left: 0; }
+    @include responsive(xxl) { margin-left: 0; }
+  }
+
+  .text {
+    max-width: 65ch;
+    @include responsive(xl)  { font-size: 18px; }
+    @include responsive(xxl) { font-size: 19px; }
+  }
+}
+
+/* 2 columnas en desktop SOLO si usas .foto */
+@supports (display: grid) {
+  .container-name {
+    @include responsive(lg)  { grid-template-columns: 1.2fr .8fr; column-gap: 48px; align-items: center; }
+    @include responsive(xl)  { column-gap: 64px; }
+    @include responsive(xxl) { column-gap: 72px; }
+  }
+
+  .foto {
+    justify-content: center;
+
+    @include responsive(md)  { justify-content: flex-start; }
+    @include responsive(lg)  { justify-content: flex-end; }
+    @include responsive(xl)  { justify-content: flex-end; }
+    @include responsive(xxl) { justify-content: flex-end; }
+
+    img {
+      width: clamp(200px, 22vw, 360px);
+      @include responsive(xl)  { width: clamp(240px, 20vw, 420px); }
+      @include responsive(xxl) { width: clamp(260px, 18vw, 480px); }
+    }
+  }
+}
+
+/* Redes: centradas en móvil, a la izquierda en desktop */
+.Networks {
+  justify-content: center;
+  margin-inline: auto;
+
+  @include responsive(md)  { margin-inline: 0; justify-content: flex-start; }
+  @include responsive(lg)  { margin-inline: 0; justify-content: flex-start; }
+  @include responsive(xl)  { margin-inline: 0; justify-content: flex-start; }
+  @include responsive(xxl) { margin-inline: 0; justify-content: flex-start; }
+}
+

@@ -1,24 +1,27 @@
-<nav class="nav">
+
+<nav class="nav" role="navigation" [class.open]="isOpen">
   <div class="TextDiferent">
     <p>PORTAFOLIO ONLINE</p>
-    </div>
-<ul class="nav-information">
-  <li>
-    <a href="#aboutme">  ABOUT ME</a>
+  </div>
 
-  </li>
-  <li>
-    <a href="#skills"> SKILLS</a>
+  <!-- Botón burger con la clase que espera tu SASS -->
+  <button
+    class="Burger"
+    type="button"
+    aria-label="Abrir menú"
+    aria-controls="navMenu"
+    [attr.aria-expanded]="isOpen"
+    (click)="toggleNav()"
+  >
+    <span></span><span></span><span></span>
+  </button>
 
-  </li>
+  <ul id="navMenu" class="nav-information" role="menubar">
+    <li role="none"><a role="menuitem" href="#aboutme"  (click)="closeNav()">ABOUT ME</a></li>
+    <li role="none"><a role="menuitem" href="#skills"   (click)="closeNav()">SKILLS</a></li>
+    <li role="none"><a role="menuitem" href="#proyects" (click)="closeNav()">PROYECTS</a></li>
+    <li role="none"><a role="menuitem" href="#contact"  (click)="closeNav()">CONTACT</a></li>
+  </ul>
 
-  <li>
-    <a href="#proyects">PROYECTS</a>
-
-  </li>
-  <li>
-    <a href="#contact">  CONTACT</a>
-
-  </li>
-</ul>
+  <div class="nav-backdrop" [hidden]="!isOpen" (click)="closeNav()"></div>
 </nav>
