@@ -1,18 +1,101 @@
+@import "../../styles/mixins";
+
 section{
   background-color: #ADFF2F;
-
+  padding: 50px;
 }
+
 .proyects{
   display: flex;
-  justify-content: space-around;
-  padding: 50px;
-
-  div{
-    a {
-      text-decoration: none; /* Quita el subrayado */
-      color: inherit; /* Usa el color de texto predeterminado */
+  justify-content: center;
+}
+.Proyectos{
+  .namePro{
+    h2{
+      margin-bottom: 0px;
     }
-
-
+    display: flex;
+    flex-direction: column;
+.lineaVerde {
+  background-color: #adff2f;
+  width: 200px;
+  height: 5px;
+}
   }
+
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  
+  text-align: center;
+  width: 30%;
+  align-items: center;
+  background-color: #161616;
+  color: white;
+  gap:10px;
+ 
+}
+
+@include responsive(xs){
+.name{
+  display: flex;
+  margin-left: 0px;
+ 
+}
+.Proyectos{
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+ 
+  
+  background-color:#161616;
+  
+}
+}
+@include responsive(md){
+.name{
+  display: flex;
+  margin-left: 0px;
+ 
+}
+.Proyectos{
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+ 
+  
+  background-color:#161616;
+  
+}
+}
+@include responsive(sm){
+.name{
+  display: flex;
+  margin-left: 0px;
+ 
+}
+.Proyectos{
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+ 
+  
+  background-color:#161616;
+  
+}
 }

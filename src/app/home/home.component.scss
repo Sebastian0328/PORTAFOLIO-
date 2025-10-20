@@ -1,6 +1,8 @@
 /* 1) Importa TU mixin (con ; al final) */
 @import "../../styles/mixins";
 
+
+
 /* 2) (Opcional) Alias para no tocar llamadas antiguas:
    Así @include respond(md) llamará a @include responsive(md) */
 @mixin respond($bp) {
@@ -20,7 +22,7 @@ $shadow-soft: 0 6px 24px rgba(0,0,0,.25);
 /* === HOME (igual puedes dejarlo así) === */
 .home {
   margin-top: 80px;
-  margin-bottom: 30px;
+  
   padding: 20px;
   background-color: $color-bg;
 
